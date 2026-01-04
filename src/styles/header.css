@@ -14,7 +14,7 @@ header {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #ddd; 
+  border-bottom: 1px solid #E5E5E5; 
   opacity: 1;          
   box-sizing: border-box;  
 }
