@@ -1,21 +1,16 @@
-import Header from "@/components/Header";
+"use client";
+import { useState } from "react";
 import Hero from "@/components/Hero";
 import FiltersBar from "@/components/FiltersBar";
 import ProductGrid from "@/components/ProductGrid";
-import Footer from "@/components/Footer";
 
 export default function HomePage() {
+  const [showFilters, setShowFilters] = useState(false);
   return (
-    <>
-      <Header />
-
-      <main>
-        <Hero/>
-        <FiltersBar />
-        <ProductGrid />
-      </main>
-
-      <Footer />
-    </>
+  <section>
+    <Hero />
+    <FiltersBar showFilters={showFilters} setShowFilters={setShowFilters} />
+    <ProductGrid showFilters={showFilters}/>
+  </section>
   );
 }
