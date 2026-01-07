@@ -1,16 +1,15 @@
-"use client";
-import { useState } from "react";
-import Hero from "@/components/Hero";
-import FiltersBar from "@/components/FiltersBar";
-import ProductGrid from "@/components/ProductGrid";
+import Hero from "@/components/Hero/Hero";
+import PLPContainer from "@/components/ProductListingContainer";
+import { getProducts } from "@/lib/api";
 
-export default function HomePage() {
-  const [showFilters, setShowFilters] = useState(false);
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const products = await getProducts();
   return (
-  <section>
-    <Hero />
-    <FiltersBar showFilters={showFilters} setShowFilters={setShowFilters} />
-    <ProductGrid showFilters={showFilters}/>
-  </section>
+    <section>
+      <Hero />
+      <PLPContainer products={products} />
+    </section>
   );
 }
