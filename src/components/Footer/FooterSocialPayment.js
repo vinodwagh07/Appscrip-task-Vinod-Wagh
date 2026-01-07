@@ -3,8 +3,8 @@ import "@/styles/footer.css";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const socialPlatforms = [
-  { name: "Instagram", src: "/images/insta.png" },
-  { name: "LinkedIn", src: "/images/linkedin.png" },
+  { name: "Instagram", src: "/images/insta.webp" },
+  { name: "LinkedIn", src: "/images/linkedin.webp" },
 ];
 
 export default function FooterSocialPayment({ openSection, toggleSection }) {
@@ -35,7 +35,7 @@ export default function FooterSocialPayment({ openSection, toggleSection }) {
       <div className="payment-section">
         <h3 className="footer-heading">mettā muse ACCEPTS</h3>
         <div className="payment-methods">
-          <img id="payment-options" src="/images/payment-options.png" alt="Accepted payment options" />
+          <img id="payment-options" src="/images/payment-options.webp" alt="Accepted payment options" />
         </div>
       </div>
     </div>

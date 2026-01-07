@@ -37,7 +37,7 @@ export default function FooterTop() {
           <div className="currency-group">
             <div className="currency-indicator">
               <div>
-                <img id="currency-flag" src="images/us-flag.png" alt="US flag indicating currency USD" />
+                <img id="currency-flag" src="images/us-flag.webp" alt="US flag indicating currency USD" />
               </div>
               <FaDiamond id="diamond-icon" />
               <h4 className="currency-code">USD</h4>

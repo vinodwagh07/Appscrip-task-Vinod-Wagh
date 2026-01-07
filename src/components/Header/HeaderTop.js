@@ -24,7 +24,7 @@ export default function HeaderTop() {
         <div className="logo">
           <Link href="/" aria-label="Go to homepage">
             <Image
-              src="/images/Logo.png"
+              src="/images/plp-logo.webp"
               alt="Company Logo"
               width={120}
               height={40}
