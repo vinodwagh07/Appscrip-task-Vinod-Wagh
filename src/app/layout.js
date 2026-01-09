@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 
 export const metadata = {
   title: "Product Listing Page | Appscrip Frontend Task",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Header />
+        <Breadcrumbs/>
         <main className="content">{children}</main>
 
         {/* Schema.org JSON-LD */}

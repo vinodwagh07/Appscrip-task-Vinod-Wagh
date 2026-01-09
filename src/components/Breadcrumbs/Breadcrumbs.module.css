@@ -1,0 +1,45 @@
+.breadcrumbNav {
+  margin-top: 1.3rem;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  display: none;
+}
+
+.breadcrumbList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.homeBreadcrumb{
+  text-decoration: none;
+  color: #BFC8CD;
+}
+
+.breadcrumbItem {
+  display: flex;
+  align-items: center;
+}
+
+.separator {
+  margin: 0 0.5rem;
+  margin-left: 0.2rem;
+  color:#BFC8CD;
+}
+
+.current {
+  font-weight: 400;
+  color: #333;
+}
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .breadcrumbNav {
+    display: block;
+  }
+}
