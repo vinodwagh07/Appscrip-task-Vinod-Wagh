@@ -1,0 +1,18 @@
+.gridWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 20px 16px;      
+  box-sizing: border-box; 
+  max-width: 1440px;
+  margin: 0 auto;       
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .gridWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0 12px; 
+  }
+}
