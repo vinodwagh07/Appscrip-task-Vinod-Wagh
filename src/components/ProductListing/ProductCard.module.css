@@ -1,0 +1,100 @@
+.productCard {
+  max-width: 18.75rem; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 300 / 399;
+  background-color: #F5F5F5;
+}
+
+.cardImage {
+  object-fit: contain;
+  padding: 0.9375rem; 
+}
+
+.cardInfo {
+  display: grid;
+  grid-template-areas: 
+    "title title"
+    "price heart";
+  grid-template-columns: 1fr auto;
+  padding: 1rem 0; 
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.cardTitle {
+  max-width: 16.8125rem; 
+  grid-area: title;
+  font-size: 1.125rem; 
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pricingText {
+  grid-area: price;
+  font-size: 0.875rem; 
+  color: #888792;
+}
+
+.underline {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.wishlistBtn {
+  grid-area: heart;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.heartIcon {
+  width: 1.5rem; 
+  height: 1.5rem;
+  color: #231F20;
+}
+
+.heartIcon.filled {
+  color: #EB4C6B;
+  transition: color 0.3s ease-in-out;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 48rem) { 
+  .cardInfo {
+    grid-template-areas: 
+      "title heart"
+      "price price";
+    gap: 0.25rem; 
+  }
+
+  .cardTitle {
+    font-size: 0.875rem; 
+    display: -webkit-box;
+    -webkit-line-clamp: 1;    
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+  }
+
+  .pricingText {
+    font-size: 0.625rem; 
+  }
+
+  .heartIcon {
+    width: 1rem; 
+    height: 1rem;
+  }
+}
