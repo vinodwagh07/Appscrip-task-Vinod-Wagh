@@ -1,5 +1,5 @@
 "use client";
-import "@/styles/header.css";
+import styles from "./Header.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -16,12 +16,16 @@ import { languages } from "../../constants/languages";
 
 export default function HeaderTop() {
   return (
-    <div className="header-top">
-      <div className="menuBar-logo">
-        <button id="menu-bar" aria-label="Open menu">
+    <div className={styles.headerTop}>
+      <div className={styles.menuBarLogo}>
+        <button
+          className={styles.menuBar}
+          aria-label="Open menu"
+        >
           <Bars3Icon />
         </button>
-        <div className="logo">
+
+        <div className={styles.logo}>
           <Link href="/" aria-label="Go to homepage">
             <Image
               src="/images/plp-logo.webp"
@@ -34,30 +38,37 @@ export default function HeaderTop() {
         </div>
       </div>
 
-      <div className="logo-text">LOGO</div>
+      <div className={styles.logoText}>LOGO</div>
 
-      <div className="header-icons">
-        <div id="header-icons">
+      <div className={styles.headerIcons}>
+        <div className={styles.headerIconsInner}>
           <button aria-label="Search">
-            <MagnifyingGlassIcon className="icon" />
+            <MagnifyingGlassIcon className={styles.icon} />
           </button>
           <button aria-label="Wishlist">
-            <HeartIcon className="icon" />
+            <HeartIcon className={styles.icon} />
           </button>
           <button aria-label="Cart">
-            <ShoppingCartIcon className="icon" />
+            <ShoppingCartIcon className={styles.icon} />
           </button>
-          <button aria-label="Profile" id="profile-btn">
-            <UserIcon className="icon" />
+          <button
+            aria-label="Profile"
+            className={styles.profileBtn}
+          >
+            <UserIcon className={styles.icon} />
           </button>
         </div>
 
-        <div className="language-dropdown">
-          <button aria-label="Select Language" className="lang-button">
-            <span>ENG</span> <ChevronDownIcon className="icon" />
+        <div className={styles.languageDropdown}>
+          <button
+            aria-label="Select Language"
+            className={styles.langButton}
+          >
+            <span>ENG</span>
+            <ChevronDownIcon className={styles.icon} />
           </button>
 
-          <ul className="lang-options">
+          <ul className={styles.langOptions}>
             {languages.map((lang) => (
               <li key={lang.code}>
                 <button>{lang.code}</button>
