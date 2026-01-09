@@ -1,0 +1,139 @@
+.filterSection {
+  border-top: 0.0625rem solid #E5E5E5;
+  border-bottom: 0.0625rem solid #E5E5E5;
+  background-color: #ffffff;
+  padding: 1.5rem 0;
+  margin: 0 5.3125rem;
+}
+
+.filterControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.controlsLeft {
+  display: flex;
+  align-items: center;
+  gap: 3.125rem;
+}
+
+.itemsCount {
+  font-family: "Simplon Norm", sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #252020;
+}
+
+.toggleBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Simplon Norm", sans-serif;
+  font-size: 1rem;
+  color: #888888;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+}
+
+.arrow {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.75rem;
+}
+
+.iconSm {
+  color: black;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.mobileFilterBtn {
+  color: #252020;
+  display: none;
+}
+
+.controlsRight {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.dropdownTrigger {
+  color: #252020;
+}
+
+.sortDropdown {
+  border: none;
+  background: transparent;
+  font-family: "Simplon Norm", sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #252020;
+  cursor: pointer;
+  text-align: right;
+  outline: none;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 48rem) {
+  .filterSection {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0.9375rem 0;
+  }
+
+  .filterControls {
+    display: flex;
+    width: 100%;
+    gap: 0;
+  }
+
+  .controlsLeft {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.0625rem solid #E5E5E5;
+  }
+
+  .controlsRight {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobileFilterBtn {
+    background: none;
+    border: none;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Simplon Norm", sans-serif;
+  }
+
+  .sortDropdown {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .itemsCount,
+  .toggleBtn {
+    display: none;
+  }
+
+  .toggleBtn {
+    gap: 0.3125rem;
+  }
+}
