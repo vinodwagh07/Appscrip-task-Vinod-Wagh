@@ -1,0 +1,81 @@
+.customDropdown {
+  position: relative;
+}
+
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  font-family: "Simplon Norm", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: white;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  padding: 1.25rem 0;
+  z-index: 50;
+  min-width: 12.5rem;
+  max-width: 90vw;
+  width: max-content;
+  max-height: 50vh;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 0.9375rem 1.5rem;
+  cursor: pointer;
+  font-family: "Simplon Norm", sans-serif;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.dropdownItem.active {
+  font-weight: 900;
+}
+
+.tickIcon {
+  width: 1rem;
+  height: 1rem;
+  color: #252020;
+}
+
+.iconSm {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+@media (max-width: 48rem) {
+  .dropdownTrigger {
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
+  .dropdownMenu {
+    right: 0;
+    min-width: auto;
+  }
+
+  .dropdownMenu li {
+    font-size: 0.7rem;
+  }
+
+  .dropdownItem {
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+  }
+}
