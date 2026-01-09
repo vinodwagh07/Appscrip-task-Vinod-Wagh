@@ -1,15 +1,19 @@
 import Hero from "@/components/Hero/Hero";
-import PLPContainer from "@/components/ProductListingContainer";
+import ProductListingAsync  from "@/components/ProductListing/ProductListingAsync";
+import ProductGridSkeleton from "@/components/ProductListing/ProductGridSkeleton";
 import { getProducts } from "@/lib/api";
+import { Suspense } from "react";
 
 export const dynamic = "force-dynamic";
 
-export default async function HomePage() {
-  const products = await getProducts();
+export default function HomePage() {
+  const productsPromise = getProducts();
   return (
     <section>
       <Hero />
-      <PLPContainer products={products} />
+      <Suspense fallback={<ProductGridSkeleton/>}>
+        <ProductListingAsync  promise={productsPromise} />
+      </Suspense>
     </section>
   );
 }
