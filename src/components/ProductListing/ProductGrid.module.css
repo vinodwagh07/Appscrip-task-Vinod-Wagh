@@ -1,0 +1,81 @@
+:root {
+  --sidebar-width: 300px;
+  --border: #e5e5e5;
+  --text: #252020;
+  --font: "Simplon Norm", sans-serif;
+}
+
+.mainLayoutContainer {
+  display: flex;
+  gap: 10px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+/* ===== PRODUCT GRID ===== */
+.productGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px; 
+}
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 48rem) {
+  .mainLayoutContainer {
+    display: block;
+    padding: 20px 16px;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 5vw;
+    max-width: 360px;
+    height: 100vh;
+
+    background: #fff;
+    z-index: 1000;
+
+    transform: translateX(-100%);
+    transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainLayoutContainer.sidebarOpen .sidebar {
+    transform: translateX(0);
+  }
+
+  .sidebarContent {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+  }
+
+  .mobileOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease;
+    z-index: 999;
+  }
+
+  .sidebarOpen .mobileOverlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
