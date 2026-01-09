@@ -1,5 +1,5 @@
 "use client";
-import "@/styles/footer.css";
+import styles from "./Footer.module.css";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const socialPlatforms = [
@@ -9,33 +9,33 @@ const socialPlatforms = [
 
 export default function FooterSocialPayment({ openSection, toggleSection }) {
   return (
-    <div className="footer-social-payment">
-      <div className="footer-col">
+    <div className={styles.footerSocialPayment}>
+      <div className={styles.footerCol}>
         <div
-          className="col-header"
+          className={styles.colHeader}
           role="button"
           aria-expanded={openSection === "follow"}
           aria-controls="follow-list"
           onClick={() => toggleSection("follow")}
         >
-          <h3 className="footer-heading">FOLLOW US</h3>
-          <span className={`arrow ${openSection === "follow" ? "up" : ""}`}>
-            <ChevronDownIcon className="icon" />
+          <h3 className={styles.footerHeading}>FOLLOW US</h3>
+          <span className={`${styles.arrow} ${openSection === "follow" ? styles.arrowUp : ""}`}>
+            <ChevronDownIcon className={styles.icon} />
           </span>
         </div>
-        <div id="follow-list" className={`social-icons ${openSection === "follow" ? "open" : ""}`}>
+        <div id="follow-list" className={`${styles.socialIcons} ${openSection === "follow" ? styles.socialIconsOpen : ""}`}>
           {socialPlatforms.map((platform) => (
-            <div key={platform.name} className="icon-circle">
+            <div key={platform.name} className={styles.iconCircle}>
               <img src={platform.src} alt={`Follow mettā muse on ${platform.name}`} />
             </div>
           ))}
         </div>
       </div>
 
-      <div className="payment-section">
-        <h3 className="footer-heading">mettā muse ACCEPTS</h3>
-        <div className="payment-methods">
-          <img id="payment-options" src="/images/payment-options.webp" alt="Accepted payment options" />
+      <div className={styles.paymentSection}>
+        <h3 className={styles.footerHeading}>mettā muse ACCEPTS</h3>
+        <div className={styles.paymentMethods}>
+          <img id={styles.paymentOptions} src="/images/payment-options.webp" alt="Accepted payment options" />
         </div>
       </div>
     </div>

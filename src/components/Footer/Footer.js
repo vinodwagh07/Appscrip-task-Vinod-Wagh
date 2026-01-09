@@ -1,5 +1,5 @@
 "use client";
-import "@/styles/footer.css";
+import styles from "./Footer.module.css";
 import { useState } from "react";
 import FooterTop from "./FooterTop";
 import FooterLinks from "./FooterLinks";
@@ -13,15 +13,15 @@ export default function Footer() {
   };
 
   return (
-    <footer className="footer">
-      <div className="footer-container">
+    <footer className={styles.footer}>
+      <div className={styles.footerContainer}>
         {/* TOP SECTION */}
         <FooterTop />
-        <hr className="footer-divider" />
+        <hr className={styles.footerDivider} />
 
         {/* BOTTOM SECTION */}
-        <section className="footer-bottom">
-          {/* Metta Muse and Quick LInks */}
+        <section className={styles.footerBottom}>
+          {/* Metta Muse and Quick Links */}
           <FooterLinks
             openSection={openSection}
             toggleSection={toggleSection}
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
         </section>
       </div>
-      <p className="footer-copyright footer-text">
+      <p className={`${styles.footerCopyright} ${styles.footerText}`}>
         Copyright © 2023 mettamuse. All rights reserved.
       </p>
     </footer>

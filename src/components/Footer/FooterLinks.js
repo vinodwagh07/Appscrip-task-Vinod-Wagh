@@ -1,5 +1,5 @@
 "use client";
-import "@/styles/footer.css";
+import styles from "./Footer.module.css";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const footerSections = [
@@ -17,28 +17,28 @@ const footerSections = [
 
 export default function FooterLinks({ openSection, toggleSection }) {
   return (
-    <div className="footer-bottom-links">
+    <div className={styles.footerBottomLinks}>
       {footerSections.map((section) => (
-        <div key={section.id} className="footer-col">
+        <div key={section.id} className={styles.footerCol}>
           <div
-            className="col-header"
+            className={styles.colHeader}
             role="button"
             aria-expanded={openSection === section.id}
             aria-controls={`${section.id}-list`}
             onClick={() => toggleSection(section.id)}
           >
-            <h3 className="footer-heading">{section.title}</h3>
-            <span className={`arrow ${openSection === section.id ? "up" : ""}`}>
-              <ChevronDownIcon className="icon" />
+            <h3 className={styles.footerHeading}>{section.title}</h3>
+            <span className={`${styles.arrow} ${openSection === section.id ? styles.arrowUp : ""}`}>
+              <ChevronDownIcon className={styles.icon} />
             </span>
           </div>
           <ul
             id={`${section.id}-list`}
-            className={`footer-list ${openSection === section.id ? "open" : ""}`}
+            className={`${styles.footerList} ${openSection === section.id ? styles.footerListOpen : ""}`}
           >
             {section.links.map((link) => (
               <li key={link}>
-                <a href="#" className="footer-link">{link}</a>
+                <a href="#" className={styles.footerLink}>{link}</a>
               </li>
             ))}
           </ul>
