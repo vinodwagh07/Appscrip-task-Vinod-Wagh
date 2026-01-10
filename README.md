@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Product Listing Page (PLP)
 
-## Getting Started
+A server-side rendered, SEO-optimized Product Listing Page built using **Next.js**.  
+The project focuses on **performance, accessibility, responsiveness, SEO best practices, and clean frontend architecture**.
 
-First, run the development server:
+
+
+## 🚀 Live Demo
+
+🔗 **Deployed URL:**  
+
+
+🔗 **GitHub Repository:**  
+https://github.com/vinodwagh07/Appscrip-task-Vinod-Wagh
+
+
+
+## 🧠 Overview
+
+This project implements a **responsive and SEO-friendly Product Listing Page (PLP)** inspired by a modern e-commerce layout.  
+It demonstrates:
+
+- Server-side rendering for improved performance and SEO
+- Scalable and maintainable React architecture
+- Minimal and efficient DOM structure
+- Production-ready frontend practices
+
+
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js (React)
+- **Rendering Strategy:** Server-Side Rendering (SSR)
+- **Styling:** CSS
+- **Data Source:** FakeStore API (mock data)
+- **Deployment:** Netlify
+
+> Lightweight, no heavy UI libraries or unnecessary dependencies to keep the bundle minimal.
+
+
+
+## ✨ Key Features
+
+- ✅ Server-side rendering for SEO-friendly HTML  
+- ✅ Fully responsive layout (mobile, tablet, desktop)  
+- ✅ SEO-focused implementation: meta tags, semantic HTML, proper heading hierarchy, alt text, structured data (Schema.org)  
+- ✅ Optimized images  
+- ✅ Clean, maintainable, and scalable codebase  
+- ✅ Minimal DOM nesting and lightweight CSS  
+- ✅ Accessible user interface  
+- ✅ Loading skeletons for better UX
+
+---
+
+## 🧩 Project Structure
+The project follows a feature-oriented structure with Next.js App Router, keeping routing, UI components, and business logic clearly separated for scalability and maintainability.
+
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+├── app/                    # Next.js App Router
+│   ├── about/              # About page route
+│   │   └── page.js
+│   ├── contact-us/         # Contact page route
+│   │   └── page.js
+│   ├── skills/             # Skills page route
+│   │   └── page.js
+│   ├── stories/            # Stories page route
+│   │   └── page.js
+│   ├── globals.css         # Global styles
+│   ├── layout.js           # Root layout
+│   └── page.js             # Home / PLP page
+│
+├── components/             # Reusable UI components
+│   ├── Breadcrumbs/
+│   ├── Footer/
+│   ├── Header/
+│   ├── Hero/
+│   └── ProductListing/     # PLP feature components
+│
+├── constants/              # Static configuration & constants
+├── lib/                    # API & external integrations
+│   └── api.js
+│
+│
+├── .env
+├── .gitignore
+├── eslint.config.mjs
+├── jsconfig.json
+├── next.config.mjs
+├── package.json
+└── README.md
+
+```
+---
+## 🌐 Performance, SSR & SEO
+
+- Data is server-rendered for faster FCP and SEO-friendly HTML  
+- Semantic HTML with proper heading hierarchy  
+- SEO-friendly image naming and alt text for all images  
+- Structured data to improve search visibility  
+- Minimal DOM nesting and lightweight CSS for performance  
+- Well-defined component boundaries to avoid unnecessary re-renders
+
+## 🧪 Running Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/vinodwagh07/Appscrip-task-Vinod-Wagh.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build for production:
+```bash
+npm run build
+npm start
+```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
