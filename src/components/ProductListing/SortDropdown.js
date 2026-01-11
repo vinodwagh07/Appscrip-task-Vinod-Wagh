@@ -21,7 +21,9 @@ export default function SortDropdown({ selectedValue, onSelect }) {
         aria-expanded={isOpen}
         onClick={() => setIsOpen(prev => !prev)}
       >
+        <span className={styles.dropdownLabel}>
         {currentOption?.label}
+        </span>
         {isOpen ? (
           <ChevronUpIcon className={styles.iconSm} />
         ) : (

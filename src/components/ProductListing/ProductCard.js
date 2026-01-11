@@ -22,6 +22,7 @@ export default function ProductCard({ product }) {
           fill
           sizes="(max-width: 768px) 50vw, 300px"
           className={styles.cardImage}
+          unoptimized
         />
       </div>
 

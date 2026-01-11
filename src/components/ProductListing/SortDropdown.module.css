@@ -1,15 +1,22 @@
 .customDropdown {
   position: relative;
+  max-width: 100%;
 }
 
 .dropdownTrigger {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
+  width: 100%;         
+  max-width: 100%;     
+  overflow: hidden;    
+  text-overflow: ellipsis; 
+  white-space: nowrap;
   background: none;
   border: none;
   font-family: "Simplon Norm", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem; 
   font-weight: 700;
   cursor: pointer;
   text-transform: uppercase;
@@ -60,6 +67,13 @@
 }
 
 @media (max-width: 48rem) {
+  .dropdownLabel {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
   .dropdownTrigger {
     font-size: 0.875rem;
     font-weight: 700;
@@ -77,5 +91,13 @@
   .dropdownItem {
     padding: 0.625rem 1rem;
     font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 22.5rem) { /* 360px */
+  .dropdownTrigger {
+    gap: 0;
+    white-space: normal; 
+    font-size: 0.875rem; 
   }
 }
