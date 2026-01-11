@@ -4,10 +4,21 @@ export async function getProducts() {
       cache: "no-store",
     });
 
-    if (!res.ok) return [];
+    if (!res.ok) {
+      console.error("Failed to fetch products:", res.status, res.statusText);
+      return [];
+    }
 
-    return await res.json();
-  } catch (e) {
+    const data = await res.json();
+
+    if (!Array.isArray(data)) {
+      console.error("Unexpected data shape from products API:", data);
+      return [];
+    }
+
+    return data;
+  } catch (err) {
+    console.error("Error fetching products:", err);
     return [];
   }
 }
