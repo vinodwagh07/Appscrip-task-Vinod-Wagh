@@ -7,12 +7,11 @@ import { Suspense } from "react";
 export const dynamic = "force-dynamic";
 
 export default function HomePage() {
-  const productsPromise = getProducts();
   return (
     <section>
       <Hero />
       <Suspense fallback={<ProductGridSkeleton/>}>
-        <ProductListingAsync  promise={productsPromise} />
+        <ProductListingAsync/>
       </Suspense>
     </section>
   );
