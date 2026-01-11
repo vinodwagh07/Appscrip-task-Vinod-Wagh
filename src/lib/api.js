@@ -1,19 +1,21 @@
-// Mock API base URL for demo purposes (environment variable friendly)
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "https://fakestoreapi.com";
+  process.env.API_BASE_URL || "https://fakestoreapi.com";
 
 export async function getProducts() {
-  try{
+  try {
     const res = await fetch(`${API_BASE_URL}/products`, {
-      next: { revalidate: 300 }, // SSR with incremental revalidation
-  });
+      cache: "no-store", // ✅ IMPORTANT for Netlify SSR
+    });
 
-  if (!res.ok) return [];
+    if (!res.ok) {
+      console.error("API error:", res.status);
+      return [];
+    }
 
-  const data = await res.json();
-  return Array.isArray(data) ? data : [];
-  }catch(e){
-     return [];
+    const data = await res.json();
+    return Array.isArray(data) ? data : [];
+  } catch (error) {
+    console.error("Fetch failed:", error);
+    return [];
   }
-
 }
