@@ -1,7 +1,11 @@
 export async function getProducts() {
   try {
     const res = await fetch("https://fakestoreapi.com/products", {
-      cache: "no-store",
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "Accept": "application/json",
+      },
+      next: { revalidate: 3600 }, // cache 1 hour
     });
 
     if (!res.ok) {
