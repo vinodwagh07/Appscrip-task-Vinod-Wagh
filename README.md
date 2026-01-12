@@ -8,7 +8,7 @@ The project focuses on **performance, accessibility, responsiveness, SEO best pr
 ## 🚀 Live Demo
 
 🔗 **Deployed URL:**  
-
+https://appscrip-task-vinod-wagh.vercel.app/
 
 🔗 **GitHub Repository:**  
 https://github.com/vinodwagh07/Appscrip-task-Vinod-Wagh
